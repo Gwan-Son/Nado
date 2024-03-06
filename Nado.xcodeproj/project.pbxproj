@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F8502DF2B98406500C05453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8502DE2B98406500C05453 /* AppDelegate.swift */; };
+		9F8502E12B98406500C05453 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8502E02B98406500C05453 /* SceneDelegate.swift */; };
+		9F8502E62B98406500C05453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8502E42B98406500C05453 /* Main.storyboard */; };
+		9F8502E82B98406600C05453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F8502E72B98406600C05453 /* Assets.xcassets */; };
+		9F8502EB2B98406600C05453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8502E92B98406600C05453 /* LaunchScreen.storyboard */; };
+		9F8502F62B98406700C05453 /* NadoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8502F52B98406700C05453 /* NadoTests.swift */; };
+		9F8503002B98406700C05453 /* NadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8502FF2B98406700C05453 /* NadoUITests.swift */; };
+		9F8503022B98406700C05453 /* NadoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8503012B98406700C05453 /* NadoUITestsLaunchTests.swift */; };
+		9FAA415B2B984598008DB48F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAA415A2B984598008DB48F /* MainViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F8502F22B98406700C05453 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F8502D32B98406500C05453 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F8502DA2B98406500C05453;
+			remoteInfo = Nado;
+		};
+		9F8502FC2B98406700C05453 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F8502D32B98406500C05453 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F8502DA2B98406500C05453;
+			remoteInfo = Nado;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F8502DB2B98406500C05453 /* Nado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nado.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F8502DE2B98406500C05453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F8502E02B98406500C05453 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9F8502E52B98406500C05453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F8502E72B98406600C05453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F8502EA2B98406600C05453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F8502EC2B98406600C05453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F8502F12B98406700C05453 /* NadoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NadoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F8502F52B98406700C05453 /* NadoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NadoTests.swift; sourceTree = "<group>"; };
+		9F8502FB2B98406700C05453 /* NadoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NadoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F8502FF2B98406700C05453 /* NadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NadoUITests.swift; sourceTree = "<group>"; };
+		9F8503012B98406700C05453 /* NadoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NadoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9FAA415A2B984598008DB48F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F8502D82B98406500C05453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F8502EE2B98406700C05453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F8502F82B98406700C05453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F8502D22B98406500C05453 = {
+			isa = PBXGroup;
+			children = (
+				9F8502DD2B98406500C05453 /* Nado */,
+				9F8502F42B98406700C05453 /* NadoTests */,
+				9F8502FE2B98406700C05453 /* NadoUITests */,
+				9F8502DC2B98406500C05453 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F8502DC2B98406500C05453 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F8502DB2B98406500C05453 /* Nado.app */,
+				9F8502F12B98406700C05453 /* NadoTests.xctest */,
+				9F8502FB2B98406700C05453 /* NadoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F8502DD2B98406500C05453 /* Nado */ = {
+			isa = PBXGroup;
+			children = (
+				9F8502DE2B98406500C05453 /* AppDelegate.swift */,
+				9F8502E02B98406500C05453 /* SceneDelegate.swift */,
+				9F8502E42B98406500C05453 /* Main.storyboard */,
+				9FAA415A2B984598008DB48F /* MainViewController.swift */,
+				9F8502E72B98406600C05453 /* Assets.xcassets */,
+				9F8502E92B98406600C05453 /* LaunchScreen.storyboard */,
+				9F8502EC2B98406600C05453 /* Info.plist */,
+			);
+			path = Nado;
+			sourceTree = "<group>";
+		};
+		9F8502F42B98406700C05453 /* NadoTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F8502F52B98406700C05453 /* NadoTests.swift */,
+			);
+			path = NadoTests;
+			sourceTree = "<group>";
+		};
+		9F8502FE2B98406700C05453 /* NadoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9F8502FF2B98406700C05453 /* NadoUITests.swift */,
+				9F8503012B98406700C05453 /* NadoUITestsLaunchTests.swift */,
+			);
+			path = NadoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F8502DA2B98406500C05453 /* Nado */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F8503052B98406700C05453 /* Build configuration list for PBXNativeTarget "Nado" */;
+			buildPhases = (
+				9F8502D72B98406500C05453 /* Sources */,
+				9F8502D82B98406500C05453 /* Frameworks */,
+				9F8502D92B98406500C05453 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nado;
+			productName = Nado;
+			productReference = 9F8502DB2B98406500C05453 /* Nado.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F8502F02B98406700C05453 /* NadoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F8503082B98406700C05453 /* Build configuration list for PBXNativeTarget "NadoTests" */;
+			buildPhases = (
+				9F8502ED2B98406700C05453 /* Sources */,
+				9F8502EE2B98406700C05453 /* Frameworks */,
+				9F8502EF2B98406700C05453 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F8502F32B98406700C05453 /* PBXTargetDependency */,
+			);
+			name = NadoTests;
+			productName = NadoTests;
+			productReference = 9F8502F12B98406700C05453 /* NadoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9F8502FA2B98406700C05453 /* NadoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F85030B2B98406700C05453 /* Build configuration list for PBXNativeTarget "NadoUITests" */;
+			buildPhases = (
+				9F8502F72B98406700C05453 /* Sources */,
+				9F8502F82B98406700C05453 /* Frameworks */,
+				9F8502F92B98406700C05453 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F8502FD2B98406700C05453 /* PBXTargetDependency */,
+			);
+			name = NadoUITests;
+			productName = NadoUITests;
+			productReference = 9F8502FB2B98406700C05453 /* NadoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F8502D32B98406500C05453 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					9F8502DA2B98406500C05453 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					9F8502F02B98406700C05453 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 9F8502DA2B98406500C05453;
+					};
+					9F8502FA2B98406700C05453 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 9F8502DA2B98406500C05453;
+					};
+				};
+			};
+			buildConfigurationList = 9F8502D62B98406500C05453 /* Build configuration list for PBXProject "Nado" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F8502D22B98406500C05453;
+			productRefGroup = 9F8502DC2B98406500C05453 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F8502DA2B98406500C05453 /* Nado */,
+				9F8502F02B98406700C05453 /* NadoTests */,
+				9F8502FA2B98406700C05453 /* NadoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F8502D92B98406500C05453 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F8502EB2B98406600C05453 /* LaunchScreen.storyboard in Resources */,
+				9F8502E82B98406600C05453 /* Assets.xcassets in Resources */,
+				9F8502E62B98406500C05453 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F8502EF2B98406700C05453 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F8502F92B98406700C05453 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F8502D72B98406500C05453 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FAA415B2B984598008DB48F /* MainViewController.swift in Sources */,
+				9F8502DF2B98406500C05453 /* AppDelegate.swift in Sources */,
+				9F8502E12B98406500C05453 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F8502ED2B98406700C05453 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F8502F62B98406700C05453 /* NadoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F8502F72B98406700C05453 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F8503022B98406700C05453 /* NadoUITestsLaunchTests.swift in Sources */,
+				9F8503002B98406700C05453 /* NadoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F8502F32B98406700C05453 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F8502DA2B98406500C05453 /* Nado */;
+			targetProxy = 9F8502F22B98406700C05453 /* PBXContainerItemProxy */;
+		};
+		9F8502FD2B98406700C05453 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F8502DA2B98406500C05453 /* Nado */;
+			targetProxy = 9F8502FC2B98406700C05453 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F8502E42B98406500C05453 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F8502E52B98406500C05453 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9F8502E92B98406600C05453 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F8502EA2B98406600C05453 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F8503032B98406700C05453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F8503042B98406700C05453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F8503062B98406700C05453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7P5U4N4C5Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nado/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.gwanson.Nado;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F8503072B98406700C05453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7P5U4N4C5Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nado/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.gwanson.Nado;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9F8503092B98406700C05453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7P5U4N4C5Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.gwanson.NadoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nado.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Nado";
+			};
+			name = Debug;
+		};
+		9F85030A2B98406700C05453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7P5U4N4C5Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.gwanson.NadoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nado.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Nado";
+			};
+			name = Release;
+		};
+		9F85030C2B98406700C05453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7P5U4N4C5Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.gwanson.NadoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nado;
+			};
+			name = Debug;
+		};
+		9F85030D2B98406700C05453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7P5U4N4C5Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.gwanson.NadoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nado;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F8502D62B98406500C05453 /* Build configuration list for PBXProject "Nado" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F8503032B98406700C05453 /* Debug */,
+				9F8503042B98406700C05453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F8503052B98406700C05453 /* Build configuration list for PBXNativeTarget "Nado" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F8503062B98406700C05453 /* Debug */,
+				9F8503072B98406700C05453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F8503082B98406700C05453 /* Build configuration list for PBXNativeTarget "NadoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F8503092B98406700C05453 /* Debug */,
+				9F85030A2B98406700C05453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F85030B2B98406700C05453 /* Build configuration list for PBXNativeTarget "NadoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F85030C2B98406700C05453 /* Debug */,
+				9F85030D2B98406700C05453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F8502D32B98406500C05453 /* Project object */;
+}
