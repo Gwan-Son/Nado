@@ -15,6 +15,7 @@
 		9F8502F62B98406700C05453 /* NadoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8502F52B98406700C05453 /* NadoTests.swift */; };
 		9F8503002B98406700C05453 /* NadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8502FF2B98406700C05453 /* NadoUITests.swift */; };
 		9F8503022B98406700C05453 /* NadoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8503012B98406700C05453 /* NadoUITestsLaunchTests.swift */; };
+		9F9B04142B989F7000D45782 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B04132B989F7000D45782 /* ToDo.swift */; };
 		9FAA415B2B984598008DB48F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAA415A2B984598008DB48F /* MainViewController.swift */; };
 		9FB7D1962B9868060057D231 /* NotoSansKR-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FB7D18D2B9868060057D231 /* NotoSansKR-Thin.ttf */; };
 		9FB7D1972B9868060057D231 /* NotoSansKR-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FB7D18E2B9868060057D231 /* NotoSansKR-ExtraLight.ttf */; };
@@ -59,6 +60,7 @@
 		9F8502FB2B98406700C05453 /* NadoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NadoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8502FF2B98406700C05453 /* NadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NadoUITests.swift; sourceTree = "<group>"; };
 		9F8503012B98406700C05453 /* NadoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NadoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9F9B04132B989F7000D45782 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		9FAA415A2B984598008DB48F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9FB7D18D2B9868060057D231 /* NotoSansKR-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Thin.ttf"; path = "../../../../Downloads/Noto_Sans_KR/static/NotoSansKR-Thin.ttf"; sourceTree = "<group>"; };
 		9FB7D18E2B9868060057D231 /* NotoSansKR-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-ExtraLight.ttf"; path = "../../../../Downloads/Noto_Sans_KR/static/NotoSansKR-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				9FB7D19F2B9876BC0057D231 /* Add.storyboard */,
 				9FB7D1A12B98771A0057D231 /* AddViewController.swift */,
 				9FAA415A2B984598008DB48F /* MainViewController.swift */,
+				9F9B04132B989F7000D45782 /* ToDo.swift */,
 				9F8502E72B98406600C05453 /* Assets.xcassets */,
 				9F8502E92B98406600C05453 /* LaunchScreen.storyboard */,
 				9F8502EC2B98406600C05453 /* Info.plist */,
@@ -312,6 +315,7 @@
 				9FAA415B2B984598008DB48F /* MainViewController.swift in Sources */,
 				9F8502DF2B98406500C05453 /* AppDelegate.swift in Sources */,
 				9FB7D1A22B98771A0057D231 /* AddViewController.swift in Sources */,
+				9F9B04142B989F7000D45782 /* ToDo.swift in Sources */,
 				9F8502E12B98406500C05453 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

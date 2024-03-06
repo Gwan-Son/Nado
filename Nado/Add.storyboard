@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,15 +23,15 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFH-CI-eD6">
-                                <rect key="frame" x="0.0" y="359" width="393" height="156"/>
+                                <rect key="frame" x="0.0" y="385" width="393" height="130"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="새 작업 입력" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="3a2-Ze-VvX">
-                                        <rect key="frame" x="11" y="33" width="371" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="새 작업 입력" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="3a2-Ze-VvX">
+                                        <rect key="frame" x="11" y="33" width="371" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykS-g7-af0">
-                                        <rect key="frame" x="347" y="110" width="33" height="33"/>
+                                        <rect key="frame" x="347" y="84" width="33" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="MLq-Ex-aVV"/>
                                             <constraint firstAttribute="width" constant="33" id="PFH-xZ-K7i"/>
@@ -42,6 +43,39 @@
                                                 <color key="backgroundColor" name="AccentColor"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="doneButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Z3b-eR-2fi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGi-CA-k0F">
+                                        <rect key="frame" x="10" y="84" width="110" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="K96-2z-sjS"/>
+                                            <constraint firstAttribute="width" constant="110" id="p9T-6o-1CW"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" imagePlacement="leading" title="날짜 및 시간" imagePadding="2" cornerStyle="capsule">
+                                            <imageReference key="image" image="clock" catalog="system" symbolScale="default"/>
+                                            <backgroundConfiguration key="background"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="14"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkT-6D-Nik">
+                                        <rect key="frame" x="145" y="84" width="110" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="chg-BX-W1c"/>
+                                            <constraint firstAttribute="width" constant="110" id="gOb-QU-xHw"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" imagePlacement="leading" title="알림 추가" imagePadding="2" cornerStyle="capsule" titleAlignment="leading">
+                                            <imageReference key="image" image="bell" catalog="system" symbolScale="default"/>
+                                            <backgroundConfiguration key="background"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="14" scale="default"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                        </buttonConfiguration>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,8 +83,12 @@
                                     <constraint firstItem="3a2-Ze-VvX" firstAttribute="leading" secondItem="SFH-CI-eD6" secondAttribute="leading" constant="11" id="1lJ-no-1zx"/>
                                     <constraint firstAttribute="trailing" secondItem="3a2-Ze-VvX" secondAttribute="trailing" constant="11" id="1zq-xe-P57"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3a2-Ze-VvX" secondAttribute="bottom" constant="50" id="9aA-m7-103"/>
+                                    <constraint firstAttribute="bottom" secondItem="OkT-6D-Nik" secondAttribute="bottom" constant="13" id="Bny-xa-iVC"/>
+                                    <constraint firstItem="OkT-6D-Nik" firstAttribute="leading" secondItem="CGi-CA-k0F" secondAttribute="trailing" constant="25" id="PV1-Yj-jJu"/>
                                     <constraint firstItem="3a2-Ze-VvX" firstAttribute="top" secondItem="SFH-CI-eD6" secondAttribute="top" constant="33" id="kH6-oe-RAx"/>
                                     <constraint firstAttribute="bottom" secondItem="ykS-g7-af0" secondAttribute="bottom" constant="13" id="lcZ-cj-X2X"/>
+                                    <constraint firstAttribute="bottom" secondItem="CGi-CA-k0F" secondAttribute="bottom" constant="13" id="qa4-L8-TqU"/>
+                                    <constraint firstItem="CGi-CA-k0F" firstAttribute="leading" secondItem="SFH-CI-eD6" secondAttribute="leading" constant="10" id="wt4-ji-6iZ"/>
                                     <constraint firstAttribute="trailing" secondItem="ykS-g7-af0" secondAttribute="trailing" constant="13" id="y2J-Qk-emn"/>
                                 </constraints>
                             </view>
@@ -60,7 +98,7 @@
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ljb-n3-IjR" secondAttribute="bottom" id="3DP-iz-b24"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SFH-CI-eD6" secondAttribute="trailing" id="EOp-BZ-okv"/>
-                            <constraint firstItem="SFH-CI-eD6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="300" id="JyS-cl-lIC"/>
+                            <constraint firstItem="SFH-CI-eD6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="326" id="JyS-cl-lIC"/>
                             <constraint firstItem="SFH-CI-eD6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Yxn-gN-EMx"/>
                             <constraint firstItem="ljb-n3-IjR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="faG-yy-z1n"/>
                             <constraint firstAttribute="top" secondItem="ljb-n3-IjR" secondAttribute="top" id="hmB-sZ-bUZ"/>
@@ -70,6 +108,7 @@
                     </view>
                     <connections>
                         <outlet property="addTextField" destination="3a2-Ze-VvX" id="Z5A-dB-oIl"/>
+                        <outlet property="inView" destination="SFH-CI-eD6" id="kPa-8L-cJh"/>
                         <outlet property="outView" destination="ljb-n3-IjR" id="GV6-vP-ynC"/>
                     </connections>
                 </viewController>
@@ -79,7 +118,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bell" catalog="system" width="125" height="128"/>
         <image name="check" width="24" height="24"/>
+        <image name="clock" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
             <color red="0.96899998188018799" green="0.66299998760223389" blue="0.15999999642372131" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
