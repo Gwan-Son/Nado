@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AddViewController" id="Y6W-OH-hqX" customClass="AddViewController" customModule="Nado" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ljb-n3-IjR">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFH-CI-eD6">
+                                <rect key="frame" x="0.0" y="359" width="393" height="156"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="새 작업 입력" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="3a2-Ze-VvX">
+                                        <rect key="frame" x="11" y="33" width="371" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykS-g7-af0">
+                                        <rect key="frame" x="347" y="110" width="33" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="MLq-Ex-aVV"/>
+                                            <constraint firstAttribute="width" constant="33" id="PFH-xZ-K7i"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="check" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="3a2-Ze-VvX" firstAttribute="leading" secondItem="SFH-CI-eD6" secondAttribute="leading" constant="11" id="1lJ-no-1zx"/>
+                                    <constraint firstAttribute="trailing" secondItem="3a2-Ze-VvX" secondAttribute="trailing" constant="11" id="1zq-xe-P57"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3a2-Ze-VvX" secondAttribute="bottom" constant="50" id="9aA-m7-103"/>
+                                    <constraint firstItem="3a2-Ze-VvX" firstAttribute="top" secondItem="SFH-CI-eD6" secondAttribute="top" constant="33" id="kH6-oe-RAx"/>
+                                    <constraint firstAttribute="bottom" secondItem="ykS-g7-af0" secondAttribute="bottom" constant="13" id="lcZ-cj-X2X"/>
+                                    <constraint firstAttribute="trailing" secondItem="ykS-g7-af0" secondAttribute="trailing" constant="13" id="y2J-Qk-emn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ljb-n3-IjR" secondAttribute="bottom" id="3DP-iz-b24"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SFH-CI-eD6" secondAttribute="trailing" id="EOp-BZ-okv"/>
+                            <constraint firstItem="SFH-CI-eD6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="300" id="JyS-cl-lIC"/>
+                            <constraint firstItem="SFH-CI-eD6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Yxn-gN-EMx"/>
+                            <constraint firstItem="ljb-n3-IjR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="faG-yy-z1n"/>
+                            <constraint firstAttribute="top" secondItem="ljb-n3-IjR" secondAttribute="top" id="hmB-sZ-bUZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="SFH-CI-eD6" secondAttribute="bottom" constant="303" id="nnm-m8-yRf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ljb-n3-IjR" secondAttribute="trailing" id="yTd-V4-iF9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addTextField" destination="3a2-Ze-VvX" id="Z5A-dB-oIl"/>
+                        <outlet property="outView" destination="ljb-n3-IjR" id="GV6-vP-ynC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="check" width="24" height="24"/>
+        <namedColor name="AccentColor">
+            <color red="0.96899998188018799" green="0.66299998760223389" blue="0.15999999642372131" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

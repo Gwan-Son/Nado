@@ -16,6 +16,17 @@
 		9F8503002B98406700C05453 /* NadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8502FF2B98406700C05453 /* NadoUITests.swift */; };
 		9F8503022B98406700C05453 /* NadoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8503012B98406700C05453 /* NadoUITestsLaunchTests.swift */; };
 		9FAA415B2B984598008DB48F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAA415A2B984598008DB48F /* MainViewController.swift */; };
+		9FB7D1962B9868060057D231 /* NotoSansKR-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FB7D18D2B9868060057D231 /* NotoSansKR-Thin.ttf */; };
+		9FB7D1972B9868060057D231 /* NotoSansKR-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FB7D18E2B9868060057D231 /* NotoSansKR-ExtraLight.ttf */; };
+		9FB7D1982B9868060057D231 /* NotoSansKR-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FB7D18F2B9868060057D231 /* NotoSansKR-Black.ttf */; };
+		9FB7D1992B9868060057D231 /* NotoSansKR-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FB7D1902B9868060057D231 /* NotoSansKR-Medium.ttf */; };
+		9FB7D19A2B9868060057D231 /* NotoSansKR-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FB7D1912B9868060057D231 /* NotoSansKR-SemiBold.ttf */; };
+		9FB7D19B2B9868060057D231 /* NotoSansKR-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FB7D1922B9868060057D231 /* NotoSansKR-Bold.ttf */; };
+		9FB7D19C2B9868060057D231 /* NotoSansKR-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FB7D1932B9868060057D231 /* NotoSansKR-Light.ttf */; };
+		9FB7D19D2B9868060057D231 /* NotoSansKR-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FB7D1942B9868060057D231 /* NotoSansKR-Regular.ttf */; };
+		9FB7D19E2B9868060057D231 /* NotoSansKR-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FB7D1952B9868060057D231 /* NotoSansKR-ExtraBold.ttf */; };
+		9FB7D1A02B9876BC0057D231 /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB7D19F2B9876BC0057D231 /* Add.storyboard */; };
+		9FB7D1A22B98771A0057D231 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7D1A12B98771A0057D231 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +60,17 @@
 		9F8502FF2B98406700C05453 /* NadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NadoUITests.swift; sourceTree = "<group>"; };
 		9F8503012B98406700C05453 /* NadoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NadoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9FAA415A2B984598008DB48F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9FB7D18D2B9868060057D231 /* NotoSansKR-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Thin.ttf"; path = "../../../../Downloads/Noto_Sans_KR/static/NotoSansKR-Thin.ttf"; sourceTree = "<group>"; };
+		9FB7D18E2B9868060057D231 /* NotoSansKR-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-ExtraLight.ttf"; path = "../../../../Downloads/Noto_Sans_KR/static/NotoSansKR-ExtraLight.ttf"; sourceTree = "<group>"; };
+		9FB7D18F2B9868060057D231 /* NotoSansKR-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Black.ttf"; path = "../../../../Downloads/Noto_Sans_KR/static/NotoSansKR-Black.ttf"; sourceTree = "<group>"; };
+		9FB7D1902B9868060057D231 /* NotoSansKR-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Medium.ttf"; path = "../../../../Downloads/Noto_Sans_KR/static/NotoSansKR-Medium.ttf"; sourceTree = "<group>"; };
+		9FB7D1912B9868060057D231 /* NotoSansKR-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-SemiBold.ttf"; path = "../../../../Downloads/Noto_Sans_KR/static/NotoSansKR-SemiBold.ttf"; sourceTree = "<group>"; };
+		9FB7D1922B9868060057D231 /* NotoSansKR-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Bold.ttf"; path = "../../../../Downloads/Noto_Sans_KR/static/NotoSansKR-Bold.ttf"; sourceTree = "<group>"; };
+		9FB7D1932B9868060057D231 /* NotoSansKR-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Light.ttf"; path = "../../../../Downloads/Noto_Sans_KR/static/NotoSansKR-Light.ttf"; sourceTree = "<group>"; };
+		9FB7D1942B9868060057D231 /* NotoSansKR-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.ttf"; path = "../../../../Downloads/Noto_Sans_KR/static/NotoSansKR-Regular.ttf"; sourceTree = "<group>"; };
+		9FB7D1952B9868060057D231 /* NotoSansKR-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-ExtraBold.ttf"; path = "../../../../Downloads/Noto_Sans_KR/static/NotoSansKR-ExtraBold.ttf"; sourceTree = "<group>"; };
+		9FB7D19F2B9876BC0057D231 /* Add.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
+		9FB7D1A12B98771A0057D231 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +101,7 @@
 		9F8502D22B98406500C05453 = {
 			isa = PBXGroup;
 			children = (
+				9FB7D18C2B9867E30057D231 /* Fonts */,
 				9F8502DD2B98406500C05453 /* Nado */,
 				9F8502F42B98406700C05453 /* NadoTests */,
 				9F8502FE2B98406700C05453 /* NadoUITests */,
@@ -102,6 +125,8 @@
 				9F8502DE2B98406500C05453 /* AppDelegate.swift */,
 				9F8502E02B98406500C05453 /* SceneDelegate.swift */,
 				9F8502E42B98406500C05453 /* Main.storyboard */,
+				9FB7D19F2B9876BC0057D231 /* Add.storyboard */,
+				9FB7D1A12B98771A0057D231 /* AddViewController.swift */,
 				9FAA415A2B984598008DB48F /* MainViewController.swift */,
 				9F8502E72B98406600C05453 /* Assets.xcassets */,
 				9F8502E92B98406600C05453 /* LaunchScreen.storyboard */,
@@ -125,6 +150,22 @@
 				9F8503012B98406700C05453 /* NadoUITestsLaunchTests.swift */,
 			);
 			path = NadoUITests;
+			sourceTree = "<group>";
+		};
+		9FB7D18C2B9867E30057D231 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9FB7D18F2B9868060057D231 /* NotoSansKR-Black.ttf */,
+				9FB7D1922B9868060057D231 /* NotoSansKR-Bold.ttf */,
+				9FB7D1952B9868060057D231 /* NotoSansKR-ExtraBold.ttf */,
+				9FB7D18E2B9868060057D231 /* NotoSansKR-ExtraLight.ttf */,
+				9FB7D1932B9868060057D231 /* NotoSansKR-Light.ttf */,
+				9FB7D1902B9868060057D231 /* NotoSansKR-Medium.ttf */,
+				9FB7D1942B9868060057D231 /* NotoSansKR-Regular.ttf */,
+				9FB7D1912B9868060057D231 /* NotoSansKR-SemiBold.ttf */,
+				9FB7D18D2B9868060057D231 /* NotoSansKR-Thin.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +272,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB7D1992B9868060057D231 /* NotoSansKR-Medium.ttf in Resources */,
+				9FB7D19C2B9868060057D231 /* NotoSansKR-Light.ttf in Resources */,
+				9FB7D1A02B9876BC0057D231 /* Add.storyboard in Resources */,
+				9FB7D19B2B9868060057D231 /* NotoSansKR-Bold.ttf in Resources */,
+				9FB7D19A2B9868060057D231 /* NotoSansKR-SemiBold.ttf in Resources */,
+				9FB7D19E2B9868060057D231 /* NotoSansKR-ExtraBold.ttf in Resources */,
+				9FB7D19D2B9868060057D231 /* NotoSansKR-Regular.ttf in Resources */,
 				9F8502EB2B98406600C05453 /* LaunchScreen.storyboard in Resources */,
+				9FB7D1962B9868060057D231 /* NotoSansKR-Thin.ttf in Resources */,
 				9F8502E82B98406600C05453 /* Assets.xcassets in Resources */,
+				9FB7D1972B9868060057D231 /* NotoSansKR-ExtraLight.ttf in Resources */,
+				9FB7D1982B9868060057D231 /* NotoSansKR-Black.ttf in Resources */,
 				9F8502E62B98406500C05453 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +311,7 @@
 			files = (
 				9FAA415B2B984598008DB48F /* MainViewController.swift in Sources */,
 				9F8502DF2B98406500C05453 /* AppDelegate.swift in Sources */,
+				9FB7D1A22B98771A0057D231 /* AddViewController.swift in Sources */,
 				9F8502E12B98406500C05453 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -425,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -450,6 +502,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,6 +531,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
