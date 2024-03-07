@@ -7,105 +7,79 @@
 
 import UIKit
 
-class MainViewController: UIViewController, AddViewControllerDelegate {
+class MainViewController: UIViewController, AddTodoDelegate {
     
     @IBOutlet weak var nothingPage: UIView!
-    @IBOutlet weak var todoTableView: UITableView!
     @IBOutlet weak var explainLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     // TodoList 배열 생성
     var todoList: [ToDo] = []
     
-    // ToDo-List가 존재하는지
-    var isTodoExist: Bool = false
+    var dataSource: UICollectionViewDiffableDataSource<Section, ToDo>!
+    var snapshot: NSDiffableDataSourceSnapshot<Section, ToDo>!
+    
+    enum Section {
+        case main
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         explainLabel.font = UIFont(name: "NotoSansKR-Regular", size: 18)
         
-        presentTodo(isTodoExist)
+        dataSource = UICollectionViewDiffableDataSource<Section, ToDo>(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodoCell", for: indexPath) as? TodoCell else {
+                return nil
+            }
+            cell.configure(itemIdentifier)
+            return cell
+        })
         
-        self.todoTableView.dataSource = self
-        self.todoTableView.delegate = self
-//        self.loadToDoList() // 유저디폴트에 저장된 목록을 불러오는 함수
-    }
-
-    // ToDo-List가 존재하지 않을 때
-    func presentTodo(_ isTodoExist: Bool) {
-        if isTodoExist {
-            todoTableView.isHidden = false
-        } else {
-            todoTableView.isHidden = true
-        }
+        snapshot = NSDiffableDataSourceSnapshot<Section, ToDo>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(todoList,toSection: .main)
+        dataSource.apply(snapshot)
+        
+        collectionView.collectionViewLayout = layout()
+        
     }
     
-    // ToDoList 저장 함수
-    func saveToDo(_ item: ToDo) {
-        todoList.append(item)
-        if isTodoExist == false { 
-            isTodoExist = true
-            presentTodo(isTodoExist)
-        }
-        print("\(todoList)")
-        todoTableView.reloadData()
-//        let data = self.todoList.map{
-//            [
-//                "title": $0.title,
-//                "done": $0.done,
-//                "data": $0.date
-//            ]
-//        }
-//        let userDefaults = UserDefaults.standard
-//        userDefaults.set(data, forKey: "todoList")
+    private func layout() -> UICollectionViewCompositionalLayout {
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(59))
+        
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(59))
+        
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 22, bottom: 10, trailing: 20)
+        section.interGroupSpacing = 15
+        
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        
+        return layout
     }
+    
+    func addTodoDidSave(todo: ToDo){
+        todoList.append(todo)
+        snapshot.appendItems([todo])
+        dataSource.apply(snapshot, animatingDifferences: true)
+    }
+   
     
     @IBAction func addButtonTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Add", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "AddViewController") as! AddViewController
-        vc.delegate = self
+        
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
+        vc.delegate = self
         present(vc, animated: true)
     }
     
-    func loadToDoList() {
-        let userDefaults = UserDefaults.standard
-        guard let data = userDefaults.object(forKey: "todoList") as? [[String: Any]] else { return }
-        self.todoList = data.compactMap{
-            guard let title = $0["title"] as? String else { return nil }
-            guard let done = $0["done"] as? Bool else { return nil }
-            guard let date = $0["date"] as? Date else { return nil }
-            return ToDo(title: title, done: done, date: date)
-        }
-    }
-}
-
-extension MainViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.todoList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath)
-        let todo = self.todoList[indexPath.row]
-        cell.textLabel?.text = todo.title
-        
-        if todo.done {
-            cell.imageView?.image = UIImage(systemName: "checkmark.circle.fill")
-        } else {
-            cell.imageView?.image = UIImage(systemName: "circle")
-        }
-        
-        return cell
-    }
-}
-
-extension MainViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var todo = self.todoList[indexPath.row]
-        todo.done = !todo.done
-        self.todoList[indexPath.row] = todo
-        self.todoTableView.reloadRows(at: [indexPath], with: .automatic)
-    }
 }

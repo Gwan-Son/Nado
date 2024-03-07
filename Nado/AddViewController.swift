@@ -7,8 +7,8 @@
 
 import UIKit
 
-protocol AddViewControllerDelegate: AnyObject {
-    func saveToDo(_ item: ToDo)
+protocol AddTodoDelegate: AnyObject {
+    func addTodoDidSave(todo: ToDo)
 }
 
 class AddViewController: UIViewController {
@@ -17,7 +17,7 @@ class AddViewController: UIViewController {
     @IBOutlet weak var addTextField: UITextField!
     @IBOutlet weak var inView: UIView!
     
-    weak var delegate: AddViewControllerDelegate?
+    weak var delegate: AddTodoDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +50,7 @@ class AddViewController: UIViewController {
         
         let newItem = ToDo(title: title, done: done, date: date)
         
-        delegate?.saveToDo(newItem)
-        
+        delegate?.addTodoDidSave(todo: newItem)
         dismiss(animated: true, completion: nil)
     }
     // 유저의 키보드가 나타날 때
