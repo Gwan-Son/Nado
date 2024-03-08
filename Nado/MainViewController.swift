@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, AddTodoDelegate {
+class MainViewController: UIViewController, AddTodoDelegate, TodoCellDelegate {
     
     @IBOutlet weak var nothingPage: UIView!
     @IBOutlet weak var explainLabel: UILabel!
@@ -18,6 +18,8 @@ class MainViewController: UIViewController, AddTodoDelegate {
     
     var dataSource: UICollectionViewDiffableDataSource<Section, ToDo>!
     var snapshot: NSDiffableDataSourceSnapshot<Section, ToDo>!
+    
+    var isExistTodo: Bool = false
     
     enum Section {
         case main
@@ -33,6 +35,7 @@ class MainViewController: UIViewController, AddTodoDelegate {
                 return nil
             }
             cell.configure(itemIdentifier)
+            cell.delegate = self
             return cell
         })
         
@@ -43,6 +46,9 @@ class MainViewController: UIViewController, AddTodoDelegate {
         
         collectionView.collectionViewLayout = layout()
         
+        if todoList.count < 1 {
+            hideCollectionView(isExistTodo)
+        }
     }
     
     private func layout() -> UICollectionViewCompositionalLayout {
@@ -65,12 +71,30 @@ class MainViewController: UIViewController, AddTodoDelegate {
         return layout
     }
     
+    // AddViewController에서 Todo를 Add하는 함수
     func addTodoDidSave(todo: ToDo){
+        if todoList.count == 0 {
+            isExistTodo = !isExistTodo
+            hideCollectionView(isExistTodo)
+        }
         todoList.append(todo)
         snapshot.appendItems([todo])
         dataSource.apply(snapshot, animatingDifferences: true)
     }
+    
+    // Todo가 존재하지 않을 때 CollectionView를 숨기기
+    func hideCollectionView(_ isExist: Bool) {
+        if isExist {
+            collectionView.isHidden = false
+        } else {
+            collectionView.isHidden = true
+        }
+    }
    
+    // TodoCell의 doneButton
+    func doneButton(_ todo:ToDo) {
+        
+    }
     
     @IBAction func addButtonTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Add", bundle: nil)

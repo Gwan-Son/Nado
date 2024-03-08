@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol TodoCellDelegate: AnyObject {
+    func doneButton(_ todo: ToDo)
+}
+
 class TodoCell: UICollectionViewCell {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    
+    weak var delegate: TodoCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,5 +34,8 @@ class TodoCell: UICollectionViewCell {
         }
         titleLabel.text = todo.title
         dateLabel.text = "00:00"
+    }
+    @IBAction func doneButtonTapped(_ sender: Any) {
+        
     }
 }
