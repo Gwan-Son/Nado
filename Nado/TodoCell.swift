@@ -7,16 +7,12 @@
 
 import UIKit
 
-protocol TodoCellDelegate: AnyObject {
-    func doneButton(_ todo: ToDo)
-}
 
 class TodoCell: UICollectionViewCell {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
-    weak var delegate: TodoCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,17 +21,21 @@ class TodoCell: UICollectionViewCell {
         contentView.layer.borderWidth = 1
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        doneButton.setImage(nil, for: .normal)
+    }
+    
+    var toggleDoneAction: (() -> Void)?
     
     func configure(_ todo: ToDo) {
-        if todo.done == true{
-            doneButton.setImage(UIImage(systemName: "checkmark.circle.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        } else {
-            doneButton.setImage(UIImage(systemName: "circle")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        }
+        let doneImage = todo.done ? UIImage(systemName: "checkmark.circle.fill")?.withRenderingMode(.alwaysTemplate) : UIImage(systemName: "circle")?.withRenderingMode(.alwaysTemplate)
+        doneButton.setImage(doneImage, for: .normal)
         titleLabel.text = todo.title
-        dateLabel.text = "00:00"
+        dateLabel.text = DateFormatter.localizedString(from: todo.date, dateStyle: .short, timeStyle: .short)
     }
+    
     @IBAction func doneButtonTapped(_ sender: Any) {
-        
+        toggleDoneAction?()
     }
 }

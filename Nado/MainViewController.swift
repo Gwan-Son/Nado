@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, AddTodoDelegate, TodoCellDelegate {
+class MainViewController: UIViewController, AddTodoDelegate {
     
     @IBOutlet weak var nothingPage: UIView!
     @IBOutlet weak var explainLabel: UILabel!
@@ -32,10 +32,12 @@ class MainViewController: UIViewController, AddTodoDelegate, TodoCellDelegate {
         
         dataSource = UICollectionViewDiffableDataSource<Section, ToDo>(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodoCell", for: indexPath) as? TodoCell else {
-                return nil
+                return UICollectionViewCell()
             }
             cell.configure(itemIdentifier)
-            cell.delegate = self
+            cell.toggleDoneAction = { [weak self] in
+                self?.toggleDone(for: itemIdentifier, at: indexPath)
+            }
             return cell
         })
         
@@ -49,8 +51,16 @@ class MainViewController: UIViewController, AddTodoDelegate, TodoCellDelegate {
         if todoList.count < 1 {
             hideCollectionView(isExistTodo)
         }
+    }	
+    private func toggleDone(for todo: ToDo, at indexPath: IndexPath) {
+        todoList[indexPath.item].done.toggle()
+        print("\(todoList[indexPath.item].done)")
+        var currentSnapshot = dataSource.snapshot()
+        currentSnapshot.reloadItems([todo])
+        dataSource.apply(currentSnapshot, animatingDifferences: true)
     }
     
+    // 레이아웃 설정
     private func layout() -> UICollectionViewCompositionalLayout {
         
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(59))
@@ -89,11 +99,6 @@ class MainViewController: UIViewController, AddTodoDelegate, TodoCellDelegate {
         } else {
             collectionView.isHidden = true
         }
-    }
-   
-    // TodoCell의 doneButton
-    func doneButton(_ todo:ToDo) {
-        
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {
