@@ -54,9 +54,11 @@ class MainViewController: UIViewController, AddTodoDelegate {
     }	
     private func toggleDone(for todo: ToDo, at indexPath: IndexPath) {
         todoList[indexPath.item].done.toggle()
-        print("\(todoList[indexPath.item].done)")
         var currentSnapshot = dataSource.snapshot()
-        currentSnapshot.reloadItems([todo])
+        var newSnapshot = NSDiffableDataSourceSnapshot<Section, ToDo>()
+        newSnapshot.appendSections([.main])
+        newSnapshot.appendItems(todoList, toSection: .main)
+        currentSnapshot = newSnapshot
         dataSource.apply(currentSnapshot, animatingDifferences: true)
     }
     
