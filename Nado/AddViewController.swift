@@ -40,7 +40,12 @@ class AddViewController: UIViewController {
         
         // Modal이 켜졌을 때 키보드로 포커스 이동
         addTextField.becomeFirstResponder()
+        
+        // 키보드의 수정제안이 표시되면 iOS17 버전 이상에서 멈추는 현상 발생
+        addTextField.autocorrectionType = .no
+        addTextField.spellCheckingType = .no
     }
+    
     
     // 입력 완료 버튼을 눌렀을 때
     @IBAction func doneButtonTapped(_ sender: Any) {
@@ -74,6 +79,6 @@ class AddViewController: UIViewController {
     
     // 키보드 동작 감시 종료
     deinit {
-            NotificationCenter.default.removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
 }
