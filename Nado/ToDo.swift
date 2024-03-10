@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct ToDo: Hashable {
+struct ToDo {
     var title: String // 작업 이름
     var done: Bool // 작업 완료 여부
     var date: Date // 작업 완료 시간
+    var star: Bool // 즐겨찾기
 }

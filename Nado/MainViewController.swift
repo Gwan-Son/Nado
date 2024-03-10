@@ -16,71 +16,24 @@ class MainViewController: UIViewController, AddTodoDelegate {
     // TodoList 배열 생성
     var todoList: [ToDo] = []
     
-    var dataSource: UICollectionViewDiffableDataSource<Section, ToDo>!
-    var snapshot: NSDiffableDataSourceSnapshot<Section, ToDo>!
     
     var isExistTodo: Bool = false
     
-    enum Section {
-        case main
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         explainLabel.font = UIFont(name: "NotoSansKR-Regular", size: 18)
         
-        dataSource = UICollectionViewDiffableDataSource<Section, ToDo>(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodoCell", for: indexPath) as? TodoCell else {
-                return UICollectionViewCell()
-            }
-            cell.configure(itemIdentifier)
-            cell.toggleDoneAction = { [weak self] in
-                self?.toggleDone(for: itemIdentifier, at: indexPath)
-            }
-            return cell
-        })
+        collectionView.dataSource = self
+        collectionView.delegate = self
         
-        snapshot = NSDiffableDataSourceSnapshot<Section, ToDo>()
-        snapshot.appendSections([.main])
-        snapshot.appendItems(todoList,toSection: .main)
-        dataSource.apply(snapshot)
         
-        collectionView.collectionViewLayout = layout()
+        
         
         if todoList.count < 1 {
             hideCollectionView(isExistTodo)
         }
-    }	
-    private func toggleDone(for todo: ToDo, at indexPath: IndexPath) {
-        todoList[indexPath.item].done.toggle()
-        var currentSnapshot = dataSource.snapshot()
-        var newSnapshot = NSDiffableDataSourceSnapshot<Section, ToDo>()
-        newSnapshot.appendSections([.main])
-        newSnapshot.appendItems(todoList, toSection: .main)
-        currentSnapshot = newSnapshot
-        dataSource.apply(currentSnapshot, animatingDifferences: true)
-    }
-    
-    // 레이아웃 설정
-    private func layout() -> UICollectionViewCompositionalLayout {
-        
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(59))
-        
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(59))
-        
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-        
-        let section = NSCollectionLayoutSection(group: group)
-        
-        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 22, bottom: 10, trailing: 20)
-        section.interGroupSpacing = 15
-        
-        let layout = UICollectionViewCompositionalLayout(section: section)
-        
-        return layout
     }
     
     // AddViewController에서 Todo를 Add하는 함수
@@ -90,8 +43,7 @@ class MainViewController: UIViewController, AddTodoDelegate {
             hideCollectionView(isExistTodo)
         }
         todoList.append(todo)
-        snapshot.appendItems([todo])
-        dataSource.apply(snapshot, animatingDifferences: true)
+        collectionView.reloadData()
     }
     
     // Todo가 존재하지 않을 때 CollectionView를 숨기기
@@ -101,6 +53,16 @@ class MainViewController: UIViewController, AddTodoDelegate {
         } else {
             collectionView.isHidden = true
         }
+    }
+    
+    func toggleDone(indexPath: IndexPath) {
+        todoList[indexPath.item].done.toggle()
+        collectionView.reloadData()
+    }
+    
+    func toggleStar(indexPath: IndexPath) {
+        todoList[indexPath.item].star.toggle()
+        collectionView.reloadData()
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {
@@ -113,4 +75,36 @@ class MainViewController: UIViewController, AddTodoDelegate {
         present(vc, animated: true)
     }
     
+}
+
+extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return todoList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodoCell", for: indexPath) as? TodoCell else {
+            return UICollectionViewCell()
+        }
+        
+        cell.configure(todoList[indexPath.item])
+        cell.toggleDoneAction = { [weak self] in
+            self?.toggleDone(indexPath: indexPath)
+        }
+        cell.toggleStarAction = { [weak self] in
+            self?.toggleStar(indexPath: indexPath)
+        }
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width: CGFloat = collectionView.bounds.width - 42
+        let height: CGFloat = collectionView.bounds.height / 10
+        return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let edge = UIEdgeInsets(top: 20, left: 22, bottom: 10, right: 20)
+        return edge
+    }
 }

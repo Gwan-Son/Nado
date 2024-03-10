@@ -12,7 +12,12 @@ class TodoCell: UICollectionViewCell {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var starButton: UIButton!
     
+    let undoneImg: String = "circle"
+    let doneImg: String = "checkmark.circle.fill"
+    let unstarImg: String = "star"
+    let starImg: String = "star.fill"
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,25 +31,27 @@ class TodoCell: UICollectionViewCell {
         doneButton.setImage(nil, for: .normal)
     }
     
-    var currentTodo: ToDo?
-    
     var toggleDoneAction: (() -> Void)?
+    var toggleStarAction: (() -> Void)?
     
     func configure(_ todo: ToDo) {
         titleLabel.text = todo.title
-        dateLabel.text = DateFormatter.localizedString(from: todo.date, dateStyle: .short, timeStyle: .short)
-        currentTodo = todo
+        dateLabel.text = DateFormatter.localizedString(from: todo.date, dateStyle: .none, timeStyle: .short)
         doneButton.setImage(nil, for: .normal)
-        updateDoneButtonImage()
+        updateDoneButtonImage(btn: doneButton, done: todo.done, unImg: undoneImg, Img: doneImg)
+        updateDoneButtonImage(btn: starButton, done: todo.star, unImg: unstarImg, Img: starImg)
+        
     }
     
-    func updateDoneButtonImage() {
-        guard let todo = currentTodo else {return}
-        let doneImage = todo.done ? UIImage(systemName: "checkmark.circle.fill")?.withRenderingMode(.alwaysTemplate) : UIImage(systemName: "circle")?.withRenderingMode(.alwaysTemplate)
-        doneButton.setImage(doneImage, for: .normal)
+    func updateDoneButtonImage(btn: UIButton, done: Bool, unImg: String, Img: String) {
+        let doneImage = done ? UIImage(systemName: Img)?.withRenderingMode(.alwaysOriginal) : UIImage(systemName: unImg)?.withRenderingMode(.alwaysTemplate)
+        btn.setImage(doneImage, for: .normal)
     }
     
     @IBAction func doneButtonTapped(_ sender: Any) {
         toggleDoneAction?()
+    }
+    @IBAction func starButtonTapped(_ sender: Any) {
+        toggleStarAction?()
     }
 }

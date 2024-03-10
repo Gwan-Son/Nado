@@ -47,8 +47,9 @@ class AddViewController: UIViewController {
         let title = addTextField.text ?? ""
         let done = false
         let date = Date()
+        let star = false
         
-        let newItem = ToDo(title: title, done: done, date: date)
+        let newItem = ToDo(title: title, done: done, date: date, star: star)
         
         delegate?.addTodoDidSave(todo: newItem)
         dismiss(animated: true, completion: nil)

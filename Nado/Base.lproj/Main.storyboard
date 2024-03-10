@@ -93,6 +93,9 @@
                                                             <color key="tintColor" red="0.77097648379999995" green="0.77097648379999995" blue="0.77097648379999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="starButtonTapped:" destination="ZgM-Lv-eZN" eventType="touchUpInside" id="d81-Xo-fyn"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.97967308760000005" green="0.97967308760000005" blue="0.97967308760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -119,6 +122,7 @@
                                                 <connections>
                                                     <outlet property="dateLabel" destination="Ofp-4K-vM2" id="1sI-Zx-Hy6"/>
                                                     <outlet property="doneButton" destination="KrU-hk-8vO" id="oFS-3P-pOl"/>
+                                                    <outlet property="starButton" destination="0Of-M5-uUX" id="m6F-Yi-u9Y"/>
                                                     <outlet property="titleLabel" destination="hRr-S1-5h3" id="0ZF-Lm-HFf"/>
                                                 </connections>
                                             </collectionViewCell>
