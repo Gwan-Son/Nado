@@ -118,7 +118,6 @@
                                                         <constraint firstAttribute="bottom" secondItem="hRr-S1-5h3" secondAttribute="bottom" constant="20" id="req-2J-So2"/>
                                                     </constraints>
                                                 </collectionViewCellContentView>
-                                                <size key="customSize" width="375" height="59"/>
                                                 <connections>
                                                     <outlet property="dateLabel" destination="Ofp-4K-vM2" id="1sI-Zx-Hy6"/>
                                                     <outlet property="doneButton" destination="KrU-hk-8vO" id="oFS-3P-pOl"/>
