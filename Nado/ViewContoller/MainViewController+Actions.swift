@@ -8,22 +8,22 @@
 import UIKit
 
 extension MainViewController {
-    typealias DataSource = UICollectionViewDiffableDataSource<Int, ToDo.ID>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, ToDo.ID>
     
-    func updateSnapshot(reloading ids: [ToDo.ID] = []) {
-        var snapshot = Snapshot()
-        snapshot.appendSections([0])
-        snapshot.appendItems(todoList.map {$0.id})
-        if !ids.isEmpty {
-            snapshot.reloadItems(ids)
-        }
-        dataSource.apply(snapshot)
-    }
-    
+    // todo의 ID를 반환
     func todo(withId id: ToDo.ID) -> ToDo {
         let index = todoList.indexOfToDo(withId: id)
         return todoList[index]
+    }
+    
+    func updateCollectionView() {
+        todoList.sort { (todo1, todo2) in
+            if todo2.done != todo1.done {
+                return todo2.done && !todo1.done
+            } else {
+                return todo1.star && !todo2.star
+            }
+        }
+        collectionView.reloadData()
     }
     
     func updateTodo(_ todo: ToDo) {
@@ -34,15 +34,20 @@ extension MainViewController {
     func completeTodo(withId id: ToDo.ID) {
         var todo = todo(withId: id)
         todo.done.toggle()
+        if todo.done {
+            todo.date = Date()
+        } else {
+            todo.date = nil
+        }
         updateTodo(todo)
-        updateSnapshot(reloading: [id])
+        updateCollectionView()
     }
     
     func checkStarTodo(withId id: ToDo.ID) {
         var todo = todo(withId: id)
         todo.star.toggle()
         updateTodo(todo)
-        updateSnapshot(reloading: [id])
+        updateCollectionView()
     }
     
     // todoList가 존재하지 않을 때 collectionView를 숨김
@@ -57,5 +62,12 @@ extension MainViewController {
         } else {
             collectionView.isHidden = true
         }
+    }
+    
+    // AddViewController에서 Todo를 Add하는 함수
+    func addTodoDidSave(todo: ToDo){
+        todoList.append(todo)
+        checkTodoList(todoCount: todoList.count)
+        collectionView.reloadData()
     }
 }

@@ -6,90 +6,43 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class MainViewController: UIViewController, AddTodoDelegate {
+
+class MainViewController: UIViewController, AddTodoDelegate  {
     
-    @IBOutlet weak var nothingPage: UIView!
-    @IBOutlet weak var explainLabel: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var nothingPage: UIView! // todoList가 존재하지 않을 때 보이는 뷰
+    @IBOutlet weak var explainLabel: UILabel! // todoList 설명
+    @IBOutlet weak var collectionView: UICollectionView! // todoList collectionView
     
-    var dataSource: DataSource!
     // TodoList 배열 생성
     var todoList: [ToDo] = ToDo.sampleData
     
+    var defaultOptions = SwipeOptions() // SwipeCellKit Options
+    var isSwipeRightEnabled = true
+    var buttonDisplayMode: ButtonDisplayMode = .imageOnly // SwipeCellKit 표시형식
+    var buttonStyle: ButtonStyle = .circular // SwipeCellKit의 버튼 모양
     
-    var isExistTodo: Bool = false
-    
+    var isExistTodo: Bool = false // todoList의 존재유무
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         explainLabel.font = UIFont(name: "NotoSansKR-Regular", size: 18)
         
-//        collectionView.dataSource = self
-//        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.delegate = self
         
-        let layout = layout()
-        
-        collectionView.collectionViewLayout = layout
-        
-        dataSource = DataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodoCell", for: indexPath) as? TodoCell else{
-                return UICollectionViewCell()
-            }
-            cell.configure(self.todoList[indexPath.item])
-            cell.toggleDoneAction = { [weak self] in
-                self?.completeTodo(withId: itemIdentifier)
-            }
-            cell.toggleStarAction = { [weak self] in
-                self?.checkStarTodo(withId: itemIdentifier)
-            }
-            return cell
-        })
-        
-        updateSnapshot()
-        
-        collectionView.dataSource = dataSource
-        
-        checkTodoList(todoCount: todoList.count)
-    }
-    
-    private func layout() -> UICollectionViewCompositionalLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(59))
-        
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(3))
-        
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-        
-        group.interItemSpacing = .fixed(15)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        
-        section.contentInsets = NSDirectionalEdgeInsets(top: 30, leading: 22, bottom: 0, trailing: 20)
-        
-        
-        
-        let layout = UICollectionViewCompositionalLayout(section: section)
-        return layout
-    }
-    
-    // AddViewController에서 Todo를 Add하는 함수
-    func addTodoDidSave(todo: ToDo){
-        todoList.append(todo)
-        checkTodoList(todoCount: todoList.count)
-        updateSnapshot()
+        checkTodoList(todoCount: todoList.count) // todoList가 존재하는지
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Add", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "AddViewController") as! AddViewController
         
-        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalPresentationStyle = .overCurrentContext // addModal을 MainView 위에 띄움
         vc.modalTransitionStyle = .crossDissolve
         vc.delegate = self
         present(vc, animated: true)
     }
-    
 }

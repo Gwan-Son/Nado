@@ -1,0 +1,6 @@
+framework module Pods_Nado {
+  umbrella header "Pods-Nado-umbrella.h"
+
+  export *
+  module * { export * }
+}

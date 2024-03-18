@@ -11,7 +11,7 @@ struct ToDo: Identifiable {
     var id: String = UUID().uuidString // 작업 id
     var title: String // 작업 이름
     var done: Bool = false // 작업 완료 여부
-    var date: Date // 작업 완료 시간
+    var date: Date? = nil // 작업 완료 시간
     var star: Bool = false // 즐겨찾기
 }
 extension [ToDo] {
@@ -26,15 +26,12 @@ extension [ToDo] {
 #if DEBUG
 extension ToDo {
     static var sampleData = [
-        ToDo(title: "공부하기", done: false, date: Date().addingTimeInterval(800.0), star: false),
-        ToDo(title: "운동하기", date: Date().addingTimeInterval(14000.0)),
-        ToDo(title: "공부하기", done: false, date: Date().addingTimeInterval(800.0), star: false),
-        ToDo(title: "운동하기", date: Date().addingTimeInterval(14000.0)),
-        ToDo(title: "공부하기", done: false, date: Date().addingTimeInterval(800.0), star: false),
-        ToDo(title: "운동하기", date: Date().addingTimeInterval(14000.0)),
-        ToDo(title: "공부하기", done: false, date: Date().addingTimeInterval(800.0), star: false),
-        ToDo(title: "운동하기", date: Date().addingTimeInterval(14000.0)),
-        ToDo(title: "공부하기", done: false, date: Date().addingTimeInterval(800.0), star: false)
+        ToDo(title: "공부하기"),
+        ToDo(title: "운동하기"),
+        ToDo(title: "밥먹기"),
+        ToDo(title: "잠자기"),
+        ToDo(title: "공부하기"),
+        ToDo(title: "운동하기")
     ]
 }
 

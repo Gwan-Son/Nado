@@ -1,0 +1,6 @@
+framework module Pods_NadoTests {
+  umbrella header "Pods-NadoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

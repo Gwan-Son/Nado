@@ -19,12 +19,9 @@ class AddViewController: UIViewController {
     
     weak var delegate: AddTodoDelegate?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // 유저의 키보드의 높이에 따라 프레임 조절
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
         
         inView.clipsToBounds = true
         inView.layer.cornerRadius = 15
@@ -38,37 +35,56 @@ class AddViewController: UIViewController {
         
         outView.addGestureRecognizer(tapGesture)
         
+        setupKeyboardEvent()
+        
         // Modal이 켜졌을 때 키보드로 포커스 이동
         addTextField.becomeFirstResponder()
         
         // 키보드의 수정제안이 표시되면 iOS17 버전 이상에서 멈추는 현상 발생
-        addTextField.autocorrectionType = .no
-        addTextField.spellCheckingType = .no
+//        addTextField.autocorrectionType = .no
+//        addTextField.spellCheckingType = .no
+    }
+    
+    func setupKeyboardEvent() {
+        // 유저의 키보드의 높이에 따라 프레임 조절
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     
     // 입력 완료 버튼을 눌렀을 때
     @IBAction func doneButtonTapped(_ sender: Any) {
-        let title = addTextField.text ?? ""
-        let done = false
-        let date = Date()
-        let star = false
+        guard let title = addTextField.text, !title.isEmpty else {
+            let alertController = UIAlertController(title: "경고", message: "제목을 입력해주세요.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "확인", style: .default) { _ in
+                self.dismiss(animated: true, completion: nil)
+            })
+            present(alertController, animated: true, completion: nil)
+            return
+        }
         
-        let newItem = ToDo(title: title, done: done, date: date, star: star)
-        
+        let newItem = ToDo(title: title)
         delegate?.addTodoDidSave(todo: newItem)
         dismiss(animated: true, completion: nil)
     }
     // 유저의 키보드가 나타날 때
-    @objc func keyboardWillShow(notification: Notification) {
-        if let keyboardFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            // 키보드가 나타날 때 뷰의 위치를 조절
-            let keyboardHeight = keyboardFrame.height
-            let newYPosition = view.frame.height - keyboardHeight - inView.frame.height
-            
-            UIView.animate(withDuration: 0.3) {
-                self.inView.frame.origin.y = newYPosition
+    @objc func keyboardWillShow(_ notification: Notification) {
+        DispatchQueue.main.async {
+            if let keyboardFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+                // 키보드가 나타날 때 뷰의 위치를 조절
+                let keyboardHeight = keyboardFrame.height
+                let newYPosition = self.view.frame.height - keyboardHeight - self.inView.frame.height
+                
+                UIView.animate(withDuration: 0.3) {
+                    self.inView.frame.origin.y = newYPosition
+                }
             }
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        if view.frame.origin.y != 0 {
+            view.frame.origin.y = 0
         }
     }
     

@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F7E8C112BA21C4A00CFF761 /* MainViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E8C102BA21C4A00CFF761 /* MainViewController+DataSource.swift */; };
+		21E264E77EC396E6F71B9A3C /* Pods_Nado_NadoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45352B7187B070C3A3615ED /* Pods_Nado_NadoUITests.framework */; };
+		6223D86BFED6FAEE1ED6311F /* Pods_NadoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA4C412C8AB890229D05C86 /* Pods_NadoTests.framework */; };
+		6B48FDBA8236A46B22253406 /* Pods_Nado.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361BA48BF9A3746F6588FB5E /* Pods_Nado.framework */; };
+		9F7E8C112BA21C4A00CFF761 /* MainViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E8C102BA21C4A00CFF761 /* MainViewController+Actions.swift */; };
 		9F8502DF2B98406500C05453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8502DE2B98406500C05453 /* AppDelegate.swift */; };
 		9F8502E12B98406500C05453 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8502E02B98406500C05453 /* SceneDelegate.swift */; };
 		9F8502E62B98406500C05453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8502E42B98406500C05453 /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 		9F8502F62B98406700C05453 /* NadoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8502F52B98406700C05453 /* NadoTests.swift */; };
 		9F8503002B98406700C05453 /* NadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8502FF2B98406700C05453 /* NadoUITests.swift */; };
 		9F8503022B98406700C05453 /* NadoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8503012B98406700C05453 /* NadoUITestsLaunchTests.swift */; };
+		9F90B3802BA89D64000AB875 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F90B37F2BA89D64000AB875 /* Shared.swift */; };
+		9F90B3832BA8D2AD000AB875 /* MainViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F90B3822BA8D2AD000AB875 /* MainViewController+CollectionView.swift */; };
+		9F90B3852BA8D39E000AB875 /* MainViewController+SwipeCellKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F90B3842BA8D39E000AB875 /* MainViewController+SwipeCellKit.swift */; };
 		9F9B04142B989F7000D45782 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B04132B989F7000D45782 /* ToDo.swift */; };
 		9F9B04162B998D3300D45782 /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B04152B998D3300D45782 /* TodoCell.swift */; };
 		9FAA415B2B984598008DB48F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAA415A2B984598008DB48F /* MainViewController.swift */; };
@@ -50,7 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9F7E8C102BA21C4A00CFF761 /* MainViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+DataSource.swift"; sourceTree = "<group>"; };
+		0DC70E497EC93D8DBC403B4A /* Pods-NadoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NadoTests.release.xcconfig"; path = "Target Support Files/Pods-NadoTests/Pods-NadoTests.release.xcconfig"; sourceTree = "<group>"; };
+		2D3BDB6C7CA9C76F63B38817 /* Pods-NadoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NadoTests.debug.xcconfig"; path = "Target Support Files/Pods-NadoTests/Pods-NadoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		361BA48BF9A3746F6588FB5E /* Pods_Nado.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nado.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44DF63CB47252B472E1F6838 /* Pods-Nado.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nado.debug.xcconfig"; path = "Target Support Files/Pods-Nado/Pods-Nado.debug.xcconfig"; sourceTree = "<group>"; };
+		8CFEF78DAC220AF3E5CC9E8E /* Pods-Nado.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nado.release.xcconfig"; path = "Target Support Files/Pods-Nado/Pods-Nado.release.xcconfig"; sourceTree = "<group>"; };
+		91BF4839E4A98BBD7D1CD8D2 /* Pods-Nado-NadoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nado-NadoUITests.release.xcconfig"; path = "Target Support Files/Pods-Nado-NadoUITests/Pods-Nado-NadoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9F7E8C102BA21C4A00CFF761 /* MainViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Actions.swift"; sourceTree = "<group>"; };
 		9F8502DB2B98406500C05453 /* Nado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8502DE2B98406500C05453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F8502E02B98406500C05453 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +75,9 @@
 		9F8502FB2B98406700C05453 /* NadoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NadoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8502FF2B98406700C05453 /* NadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NadoUITests.swift; sourceTree = "<group>"; };
 		9F8503012B98406700C05453 /* NadoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NadoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9F90B37F2BA89D64000AB875 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		9F90B3822BA8D2AD000AB875 /* MainViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		9F90B3842BA8D39E000AB875 /* MainViewController+SwipeCellKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+SwipeCellKit.swift"; sourceTree = "<group>"; };
 		9F9B04132B989F7000D45782 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		9F9B04152B998D3300D45782 /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
 		9FAA415A2B984598008DB48F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +92,9 @@
 		9FB7D1952B9868060057D231 /* NotoSansKR-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-ExtraBold.ttf"; path = "../../../../Downloads/Noto_Sans_KR/static/NotoSansKR-ExtraBold.ttf"; sourceTree = "<group>"; };
 		9FB7D19F2B9876BC0057D231 /* Add.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
 		9FB7D1A12B98771A0057D231 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		B45352B7187B070C3A3615ED /* Pods_Nado_NadoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nado_NadoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9DEBD7D0F442A8BBB272E3F /* Pods-Nado-NadoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nado-NadoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nado-NadoUITests/Pods-Nado-NadoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DFA4C412C8AB890229D05C86 /* Pods_NadoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NadoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B48FDBA8236A46B22253406 /* Pods_Nado.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6223D86BFED6FAEE1ED6311F /* Pods_NadoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21E264E77EC396E6F71B9A3C /* Pods_Nado_NadoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				9F9B04132B989F7000D45782 /* ToDo.swift */,
+				9F90B37F2BA89D64000AB875 /* Shared.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,7 +139,9 @@
 			children = (
 				9FB7D1A12B98771A0057D231 /* AddViewController.swift */,
 				9FAA415A2B984598008DB48F /* MainViewController.swift */,
-				9F7E8C102BA21C4A00CFF761 /* MainViewController+DataSource.swift */,
+				9F7E8C102BA21C4A00CFF761 /* MainViewController+Actions.swift */,
+				9F90B3822BA8D2AD000AB875 /* MainViewController+CollectionView.swift */,
+				9F90B3842BA8D39E000AB875 /* MainViewController+SwipeCellKit.swift */,
 			);
 			path = ViewContoller;
 			sourceTree = "<group>";
@@ -130,6 +154,8 @@
 				9F8502F42B98406700C05453 /* NadoTests */,
 				9F8502FE2B98406700C05453 /* NadoUITests */,
 				9F8502DC2B98406500C05453 /* Products */,
+				BC6A59987F5392B9EB241CDD /* Pods */,
+				F5F0DB7978C42FB0EABA5EE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,11 +173,11 @@
 			isa = PBXGroup;
 			children = (
 				9F7E8C0E2BA21B3100CFF761 /* Models */,
+				9F90B3812BA8D23C000AB875 /* Cell */,
 				9F7E8C0F2BA21B3800CFF761 /* ViewContoller */,
 				9F8502DE2B98406500C05453 /* AppDelegate.swift */,
 				9F8502E02B98406500C05453 /* SceneDelegate.swift */,
 				9F8502E42B98406500C05453 /* Main.storyboard */,
-				9F9B04152B998D3300D45782 /* TodoCell.swift */,
 				9FB7D19F2B9876BC0057D231 /* Add.storyboard */,
 				9F8502E72B98406600C05453 /* Assets.xcassets */,
 				9F8502E92B98406600C05453 /* LaunchScreen.storyboard */,
@@ -177,6 +203,14 @@
 			path = NadoUITests;
 			sourceTree = "<group>";
 		};
+		9F90B3812BA8D23C000AB875 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9F9B04152B998D3300D45782 /* TodoCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		9FB7D18C2B9867E30057D231 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +227,29 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		BC6A59987F5392B9EB241CDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44DF63CB47252B472E1F6838 /* Pods-Nado.debug.xcconfig */,
+				8CFEF78DAC220AF3E5CC9E8E /* Pods-Nado.release.xcconfig */,
+				C9DEBD7D0F442A8BBB272E3F /* Pods-Nado-NadoUITests.debug.xcconfig */,
+				91BF4839E4A98BBD7D1CD8D2 /* Pods-Nado-NadoUITests.release.xcconfig */,
+				2D3BDB6C7CA9C76F63B38817 /* Pods-NadoTests.debug.xcconfig */,
+				0DC70E497EC93D8DBC403B4A /* Pods-NadoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F5F0DB7978C42FB0EABA5EE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				361BA48BF9A3746F6588FB5E /* Pods_Nado.framework */,
+				B45352B7187B070C3A3615ED /* Pods_Nado_NadoUITests.framework */,
+				DFA4C412C8AB890229D05C86 /* Pods_NadoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,9 +257,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F8503052B98406700C05453 /* Build configuration list for PBXNativeTarget "Nado" */;
 			buildPhases = (
+				F39332461C450825E4F22A63 /* [CP] Check Pods Manifest.lock */,
 				9F8502D72B98406500C05453 /* Sources */,
 				9F8502D82B98406500C05453 /* Frameworks */,
 				9F8502D92B98406500C05453 /* Resources */,
+				597ED42814C18E84C8B6A34D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +276,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F8503082B98406700C05453 /* Build configuration list for PBXNativeTarget "NadoTests" */;
 			buildPhases = (
+				67A639C45A2AC519187288AF /* [CP] Check Pods Manifest.lock */,
 				9F8502ED2B98406700C05453 /* Sources */,
 				9F8502EE2B98406700C05453 /* Frameworks */,
 				9F8502EF2B98406700C05453 /* Resources */,
@@ -235,9 +295,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F85030B2B98406700C05453 /* Build configuration list for PBXNativeTarget "NadoUITests" */;
 			buildPhases = (
+				EE2E6D6313A7E1A0478EAC7D /* [CP] Check Pods Manifest.lock */,
 				9F8502F72B98406700C05453 /* Sources */,
 				9F8502F82B98406700C05453 /* Frameworks */,
 				9F8502F92B98406700C05453 /* Resources */,
+				4BD5725B9784DDF46C353D1D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -329,17 +391,123 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4BD5725B9784DDF46C353D1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nado-NadoUITests/Pods-Nado-NadoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nado-NadoUITests/Pods-Nado-NadoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nado-NadoUITests/Pods-Nado-NadoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		597ED42814C18E84C8B6A34D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nado/Pods-Nado-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nado/Pods-Nado-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nado/Pods-Nado-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67A639C45A2AC519187288AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NadoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE2E6D6313A7E1A0478EAC7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nado-NadoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F39332461C450825E4F22A63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nado-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9F8502D72B98406500C05453 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9FAA415B2B984598008DB48F /* MainViewController.swift in Sources */,
-				9F7E8C112BA21C4A00CFF761 /* MainViewController+DataSource.swift in Sources */,
+				9F90B3852BA8D39E000AB875 /* MainViewController+SwipeCellKit.swift in Sources */,
+				9F7E8C112BA21C4A00CFF761 /* MainViewController+Actions.swift in Sources */,
 				9F9B04162B998D3300D45782 /* TodoCell.swift in Sources */,
+				9F90B3832BA8D2AD000AB875 /* MainViewController+CollectionView.swift in Sources */,
 				9F8502DF2B98406500C05453 /* AppDelegate.swift in Sources */,
 				9FB7D1A22B98771A0057D231 /* AddViewController.swift in Sources */,
 				9F9B04142B989F7000D45782 /* ToDo.swift in Sources */,
+				9F90B3802BA89D64000AB875 /* Shared.swift in Sources */,
 				9F8502E12B98406500C05453 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,7 +601,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -496,7 +664,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -517,6 +685,7 @@
 		};
 		9F8503062B98406700C05453 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44DF63CB47252B472E1F6838 /* Pods-Nado.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -546,6 +715,7 @@
 		};
 		9F8503072B98406700C05453 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CFEF78DAC220AF3E5CC9E8E /* Pods-Nado.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -575,6 +745,7 @@
 		};
 		9F8503092B98406700C05453 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D3BDB6C7CA9C76F63B38817 /* Pods-NadoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -595,6 +766,7 @@
 		};
 		9F85030A2B98406700C05453 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DC70E497EC93D8DBC403B4A /* Pods-NadoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -615,6 +787,7 @@
 		};
 		9F85030C2B98406700C05453 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9DEBD7D0F442A8BBB272E3F /* Pods-Nado-NadoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -633,6 +806,7 @@
 		};
 		9F85030D2B98406700C05453 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91BF4839E4A98BBD7D1CD8D2 /* Pods-Nado-NadoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
