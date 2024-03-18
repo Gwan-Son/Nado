@@ -37,8 +37,9 @@ extension MainViewController: SwipeCollectionViewCellDelegate {
             
             let delete = SwipeAction(style: .destructive, title: nil) { action, indexPath in
                 self.todoList.remove(at: indexPath.row)
+                self.checkTodoList(todoCount: self.todoList.count)
             }
-             configure(action: delete, with: .trash)
+            configure(action: delete, with: .trash)
             
             return [delete, star]
         }
