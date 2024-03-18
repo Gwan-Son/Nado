@@ -9,6 +9,7 @@ import UIKit
 
 protocol AddTodoDelegate: AnyObject {
     func addTodoDidSave(todo: ToDo)
+    func editTodoDidSave(todo: ToDo)
 }
 
 class AddViewController: UIViewController {
@@ -19,6 +20,7 @@ class AddViewController: UIViewController {
     
     weak var delegate: AddTodoDelegate?
     
+    var todoToEdit: ToDo?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,11 @@ class AddViewController: UIViewController {
         // 키보드의 수정제안이 표시되면 iOS17 버전 이상에서 멈추는 현상 발생
 //        addTextField.autocorrectionType = .no
 //        addTextField.spellCheckingType = .no
+        
+        if let todo = todoToEdit {
+            // 수정할 내용
+            addTextField.text = todo.title
+        }
     }
     
     func setupKeyboardEvent() {
@@ -63,8 +70,15 @@ class AddViewController: UIViewController {
             return
         }
         
-        let newItem = ToDo(title: title)
-        delegate?.addTodoDidSave(todo: newItem)
+        if let todoToEdits = todoToEdit {
+            // Edit
+            todoToEdit?.title = title
+            delegate?.editTodoDidSave(todo: todoToEdit!)
+        } else {
+            // Add
+            let newItem = ToDo(title: title)
+            delegate?.addTodoDidSave(todo: newItem)
+        }
         dismiss(animated: true, completion: nil)
     }
     // 유저의 키보드가 나타날 때

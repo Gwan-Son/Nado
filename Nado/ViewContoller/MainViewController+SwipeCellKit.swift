@@ -26,14 +26,16 @@ extension MainViewController: SwipeCollectionViewCellDelegate {
             
             return [done]
         } else {
-            let star = SwipeAction(style: .default, title: nil) { action, indexPath in
-                let cell = collectionView.cellForItem(at: indexPath) as! TodoCell
-                cell.setStar(todo.star, animated: true)
-                self.checkStarTodo(withId: todo.id)
+            let edit = SwipeAction(style: .default, title: nil) { action, indexPath in
+                // Edit action
+                let storyboard = UIStoryboard(name: "Add", bundle: nil)
+                guard let editVC = storyboard.instantiateViewController(withIdentifier: "AddViewController") as? AddViewController else { return }
+                editVC.todoToEdit = self.todoList[indexPath.item] // 수정할 todo
+                print(self.todoList[indexPath.item])
+                editVC.delegate = self
+                self.present(editVC, animated: true)
             }
-            star.hidesWhenSelected = true
-            let descriptor: ActionDescriptor = todo.star ? .star : .unstar
-            configure(action: star, with: descriptor)
+            configure(action: edit, with: .edit)
             
             let delete = SwipeAction(style: .destructive, title: nil) { action, indexPath in
                 self.todoList.remove(at: indexPath.row)
@@ -41,7 +43,7 @@ extension MainViewController: SwipeCollectionViewCellDelegate {
             }
             configure(action: delete, with: .trash)
             
-            return [delete, star]
+            return [delete, edit]
         }
     }
     

@@ -40,6 +40,7 @@ class MainViewController: UIViewController, AddTodoDelegate  {
         let storyboard = UIStoryboard(name: "Add", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "AddViewController") as! AddViewController
         
+        vc.todoToEdit = nil
         vc.modalPresentationStyle = .overCurrentContext // addModal을 MainView 위에 띄움
         vc.modalTransitionStyle = .crossDissolve
         vc.delegate = self

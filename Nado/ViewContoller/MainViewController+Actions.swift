@@ -70,4 +70,10 @@ extension MainViewController {
         checkTodoList(todoCount: todoList.count)
         collectionView.reloadData()
     }
+    
+    // AddViewController에서 Todo를 Edit하는 함수
+    func editTodoDidSave(todo: ToDo) {
+        updateTodo(todo)
+        updateCollectionView()
+    }
 }

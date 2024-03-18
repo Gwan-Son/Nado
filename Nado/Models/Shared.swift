@@ -19,16 +19,17 @@ class IndicatorView: UIView {
 }
 
 enum ActionDescriptor {
-    case done, undone, star, unstar, trash
+    case done, undone, star, unstar, edit, trash
     
     func title(forDisplayMode displayMode: ButtonDisplayMode) -> String? {
         guard displayMode != .imageOnly else { return nil }
         
         switch self {
-        case .done: return "Read"
-        case .undone: return "Unread"
-        case .star: return "More"
-        case .unstar: return "Flag"
+        case .done: return "Done"
+        case .undone: return "Undone"
+        case .star: return "Star"
+        case .unstar: return "Unstar"
+        case .edit: return "Edit"
         case .trash: return "Trash"
         }
     }
@@ -42,6 +43,7 @@ enum ActionDescriptor {
         case .undone: name = "Undone"
         case .star: name = "Star"
         case .unstar: name = "Unstar"
+        case .edit: name = "Edit"
         case .trash: name = "Trash"
         }
         
@@ -53,6 +55,7 @@ enum ActionDescriptor {
             case .undone: name = "checkmark.circle.fill"
             case .star: name = "star.slash.fill"
             case .unstar: name = "star.fill"
+            case .edit: name = "square.and.pencil"
             case .trash: name = "trash.fill"
             }
             
@@ -77,12 +80,14 @@ enum ActionDescriptor {
         switch self {
         case .done, .undone: return UIColor.systemBlue
         case .star, .unstar: return UIColor.systemOrange
+        case .edit: return UIColor.systemGray
         case .trash: return UIColor.systemRed
         }
 #else
         switch self {
         case .done, .undone: return #colorLiteral(red: 0, green: 0.4577052593, blue: 1, alpha: 1)
         case .star, .unstar: return #colorLiteral(red: 1, green: 0.5803921569, blue: 0, alpha: 1)
+        case .edit: return #colorLiteral(red: 0.7994344831, green: 0.7994344831, blue: 0.7994344831, alpha: 1)
         case .trash: return #colorLiteral(red: 1, green: 0.2352941176, blue: 0.1882352941, alpha: 1)
         }
 #endif
