@@ -92,11 +92,7 @@ class TodoCell: SwipeCollectionViewCell {
     // cell 구성
     func configure(_ todo: ToDo) {
         titleLabel.text = todo.title
-        if todo.date == nil {
-            dateLabel.text = ""
-        } else {
-            dateLabel.text = DateFormatter.localizedString(from: todo.date!, dateStyle: .none, timeStyle: .short)
-        }
+        dateLabel.text = todo.createDate.dayAndTimeText
         titleLabel.applyStrikeThroughIfDone(todo.done)
         updateDoneButtonImage(btn: doneButton, done: todo.done, unImg: undoneImg, Img: doneImg)
         updateDoneButtonImage(btn: starButton, done: todo.star, unImg: unstarImg, Img: starImg)

@@ -18,6 +18,16 @@ class MainViewController: UIViewController, AddTodoDelegate  {
     // TodoList 배열 생성
     var todoList: [ToDo] = ToDo.sampleData
     
+    // TODO: - todoList 필터링
+    var listStyle: ToDoListStyle = .today
+    var filteredTodoList: [ToDo] {
+        return todoList.filter { listStyle.shouldInclude(date: $0.createDate) }.sorted {
+            $0.createDate < $1.createDate
+        }
+    }
+    
+    let listStyleSegmentedControl = UISegmentedControl(items: [ToDoListStyle.today.name, ToDoListStyle.future.name, ToDoListStyle.all.name])
+    
     var defaultOptions = SwipeOptions() // SwipeCellKit Options
     var isSwipeRightEnabled = true
     var buttonDisplayMode: ButtonDisplayMode = .imageOnly // SwipeCellKit 표시형식
@@ -32,6 +42,11 @@ class MainViewController: UIViewController, AddTodoDelegate  {
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        // TODO: - todoList를 날짜로 오늘/미래/전부 필터링하려고 함
+        listStyleSegmentedControl.selectedSegmentIndex = listStyle.rawValue
+//        listStyleSegmentedControl.addTarget(self, action: #selector(didChangeListStyle(_:)), for: .valueChanged)
+        navigationItem.titleView = listStyleSegmentedControl
         
         checkTodoList(todoCount: todoList.count) // todoList가 존재하는지
     }

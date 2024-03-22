@@ -66,24 +66,18 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRr-S1-5h3">
-                                                            <rect key="frame" x="49" y="17" width="30" height="22"/>
+                                                            <rect key="frame" x="49" y="10" width="30" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDS-vI-SuG">
-                                                            <rect key="frame" x="248.66666666666666" y="22" width="1" height="15"/>
+                                                            <rect key="frame" x="323" y="22" width="1" height="15"/>
                                                             <color key="backgroundColor" red="0.79943448309999998" green="0.79943448309999998" blue="0.79943448309999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="1" id="O5Z-9r-DZo"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofp-4K-vM2">
-                                                            <rect key="frame" x="275.66666666666669" y="17" width="32.333333333333314" height="22"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Of-M5-uUX">
                                                             <rect key="frame" x="334" y="19" width="20" height="20"/>
                                                             <constraints>
@@ -97,6 +91,12 @@
                                                                 <action selector="starButtonTapped:" destination="ZgM-Lv-eZN" eventType="touchUpInside" id="d81-Xo-fyn"/>
                                                             </connections>
                                                         </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofp-4K-vM2">
+                                                            <rect key="frame" x="49" y="33" width="27" height="15"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.97967308760000005" green="0.97967308760000005" blue="0.97967308760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -104,18 +104,17 @@
                                                         <constraint firstItem="KrU-hk-8vO" firstAttribute="top" secondItem="4XD-Qs-qmb" secondAttribute="top" constant="20" id="3fC-Vm-rdK"/>
                                                         <constraint firstItem="hDS-vI-SuG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hRr-S1-5h3" secondAttribute="trailing" constant="20" id="5DZ-Yf-LGM"/>
                                                         <constraint firstItem="hDS-vI-SuG" firstAttribute="top" secondItem="4XD-Qs-qmb" secondAttribute="top" constant="22" id="6Ew-kj-BXg"/>
-                                                        <constraint firstItem="Ofp-4K-vM2" firstAttribute="top" secondItem="4XD-Qs-qmb" secondAttribute="top" constant="17" id="A2N-Ep-Ci4"/>
                                                         <constraint firstAttribute="bottom" secondItem="0Of-M5-uUX" secondAttribute="bottom" constant="20" id="Isa-uy-8f3"/>
                                                         <constraint firstItem="0Of-M5-uUX" firstAttribute="top" secondItem="4XD-Qs-qmb" secondAttribute="top" constant="19" id="J0l-uQ-iBB"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Ofp-4K-vM2" secondAttribute="bottom" constant="20" id="NRd-HN-z42"/>
-                                                        <constraint firstItem="0Of-M5-uUX" firstAttribute="leading" secondItem="Ofp-4K-vM2" secondAttribute="trailing" constant="26" id="RUa-kv-c4H"/>
+                                                        <constraint firstItem="Ofp-4K-vM2" firstAttribute="leading" secondItem="hRr-S1-5h3" secondAttribute="leading" id="L16-Wm-V2I"/>
                                                         <constraint firstAttribute="bottom" secondItem="KrU-hk-8vO" secondAttribute="bottom" constant="20" id="UM8-Ub-e4S"/>
                                                         <constraint firstAttribute="bottom" secondItem="hDS-vI-SuG" secondAttribute="bottom" constant="22" id="Yu0-yL-DEe"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ofp-4K-vM2" secondAttribute="bottom" constant="10" id="b52-2T-lxH"/>
                                                         <constraint firstAttribute="trailing" secondItem="0Of-M5-uUX" secondAttribute="trailing" constant="21" id="bZN-Ky-IVB"/>
+                                                        <constraint firstItem="Ofp-4K-vM2" firstAttribute="top" secondItem="hRr-S1-5h3" secondAttribute="bottom" constant="5" id="jEM-Pc-jgW"/>
                                                         <constraint firstItem="KrU-hk-8vO" firstAttribute="leading" secondItem="4XD-Qs-qmb" secondAttribute="leading" constant="20" id="mdv-gt-ITw"/>
-                                                        <constraint firstItem="hRr-S1-5h3" firstAttribute="top" secondItem="4XD-Qs-qmb" secondAttribute="top" constant="17" id="mjg-3R-aC9"/>
-                                                        <constraint firstItem="Ofp-4K-vM2" firstAttribute="leading" secondItem="hDS-vI-SuG" secondAttribute="trailing" constant="26" id="nsI-v2-H8Y"/>
-                                                        <constraint firstAttribute="bottom" secondItem="hRr-S1-5h3" secondAttribute="bottom" constant="20" id="req-2J-So2"/>
+                                                        <constraint firstItem="hRr-S1-5h3" firstAttribute="top" secondItem="4XD-Qs-qmb" secondAttribute="top" constant="10" id="mjg-3R-aC9"/>
+                                                        <constraint firstItem="0Of-M5-uUX" firstAttribute="leading" secondItem="hDS-vI-SuG" secondAttribute="trailing" constant="10" id="ntU-mc-p6L"/>
                                                     </constraints>
                                                 </collectionViewCellContentView>
                                                 <connections>

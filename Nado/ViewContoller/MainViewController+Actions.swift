@@ -19,8 +19,10 @@ extension MainViewController {
         todoList.sort { (todo1, todo2) in
             if todo2.done != todo1.done {
                 return todo2.done && !todo1.done
-            } else {
+            } else if todo1.star != todo2.star {
                 return todo1.star && !todo2.star
+            } else {
+                return todo1.createDate < todo2.createDate
             }
         }
         collectionView.reloadData()
@@ -35,9 +37,9 @@ extension MainViewController {
         var todo = todo(withId: id)
         todo.done.toggle()
         if todo.done {
-            todo.date = Date()
+            todo.doneDate = Date()
         } else {
-            todo.date = nil
+            todo.doneDate = nil
         }
         updateTodo(todo)
         updateCollectionView()
@@ -59,6 +61,7 @@ extension MainViewController {
         }
         if isExistTodo {
             collectionView.isHidden = false
+            updateCollectionView()
         } else {
             collectionView.isHidden = true
         }
@@ -74,6 +77,11 @@ extension MainViewController {
     // AddViewController에서 Todo를 Edit하는 함수
     func editTodoDidSave(todo: ToDo) {
         updateTodo(todo)
+        updateCollectionView()
+    }
+    
+    @objc func didChangeListStyle(_ sender: UISegmentedControl) {
+        listStyle = ToDoListStyle(rawValue: sender.selectedSegmentIndex) ?? .today
         updateCollectionView()
     }
 }
