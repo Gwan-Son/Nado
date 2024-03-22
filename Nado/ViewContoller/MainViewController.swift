@@ -22,7 +22,13 @@ class MainViewController: UIViewController, AddTodoDelegate  {
     var listStyle: ToDoListStyle = .today
     var filteredTodoList: [ToDo] {
         return todoList.filter { listStyle.shouldInclude(date: $0.createDate) }.sorted {
-            $0.createDate < $1.createDate
+            if $1.done != $0.done {
+                $1.done && !$0.done
+            } else if $0.star != $1.star {
+                $0.star && !$1.star
+            } else {
+                $0.createDate < $1.createDate
+            }
         }
     }
     
@@ -45,10 +51,10 @@ class MainViewController: UIViewController, AddTodoDelegate  {
         
         // TODO: - todoList를 날짜로 오늘/미래/전부 필터링하려고 함
         listStyleSegmentedControl.selectedSegmentIndex = listStyle.rawValue
-//        listStyleSegmentedControl.addTarget(self, action: #selector(didChangeListStyle(_:)), for: .valueChanged)
+        listStyleSegmentedControl.addTarget(self, action: #selector(didChangeListStyle(_:)), for: .valueChanged)
         navigationItem.titleView = listStyleSegmentedControl
         
-        checkTodoList(todoCount: todoList.count) // todoList가 존재하는지
+        checkTodoList(todoCount: filteredTodoList.count) // todoList가 존재하는지
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {

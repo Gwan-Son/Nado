@@ -25,6 +25,7 @@ extension MainViewController {
                 return todo1.createDate < todo2.createDate
             }
         }
+        checkTodoList(todoCount: filteredTodoList.count)
         collectionView.reloadData()
     }
     
@@ -61,7 +62,6 @@ extension MainViewController {
         }
         if isExistTodo {
             collectionView.isHidden = false
-            updateCollectionView()
         } else {
             collectionView.isHidden = true
         }

@@ -11,7 +11,7 @@ import SwipeCellKit
 extension MainViewController: SwipeCollectionViewCellDelegate {
     // collectionView에 SwipeCellKit 적용
     func collectionView(_ collectionView: UICollectionView, editActionsForItemAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
-        let todo = todoList[indexPath.row]
+        let todo = filteredTodoList[indexPath.row]
         
         if orientation == .left {
             guard isSwipeRightEnabled else { return nil }
@@ -30,16 +30,19 @@ extension MainViewController: SwipeCollectionViewCellDelegate {
                 // Edit action
                 let storyboard = UIStoryboard(name: "Add", bundle: nil)
                 guard let editVC = storyboard.instantiateViewController(withIdentifier: "AddViewController") as? AddViewController else { return }
-                editVC.todoToEdit = self.todoList[indexPath.item] // 수정할 todo
-                print(self.todoList[indexPath.item])
+                editVC.todoToEdit = self.filteredTodoList[indexPath.item] // 수정할 todo
                 editVC.delegate = self
                 self.present(editVC, animated: true)
             }
             configure(action: edit, with: .edit)
             
             let delete = SwipeAction(style: .destructive, title: nil) { action, indexPath in
-                self.todoList.remove(at: indexPath.row)
-                self.checkTodoList(todoCount: self.todoList.count)
+                let todoToRemove = self.filteredTodoList[indexPath.row]
+                
+                if let indexToRemove = self.todoList.firstIndex(where: { $0.id == todoToRemove.id}) {
+                    self.todoList.remove(at: indexToRemove)
+                    self.checkTodoList(todoCount: self.filteredTodoList.count)
+                }
             }
             configure(action: delete, with: .trash)
             

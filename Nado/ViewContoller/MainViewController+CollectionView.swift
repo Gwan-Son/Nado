@@ -10,7 +10,8 @@ import UIKit
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     // collectionView에 cell을 연결
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let todo = todoList[indexPath.row]
+//        let todo = todoList[indexPath.row]
+        let todo = filteredTodoList[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodoCell", for: indexPath) as! TodoCell
         cell.delegate = self
         cell.selectedBackgroundView = UIView()
@@ -30,7 +31,8 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     // collectionView의 cell 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return todoList.count
+//        return todoList.count
+        return filteredTodoList.count
     }
     
     // collectionVeiw의 margins
