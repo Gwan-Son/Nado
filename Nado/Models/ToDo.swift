@@ -30,9 +30,9 @@ extension ToDo {
         ToDo(title: "공부하기", createDate: Date().addingTimeInterval(800.0)),
         ToDo(title: "운동하기", createDate: Date().addingTimeInterval(14000.0)),
         ToDo(title: "밥먹기", createDate: Date().addingTimeInterval(24000.0)),
-        ToDo(title: "잠자기", createDate: Date().addingTimeInterval(3200.0)),
-        ToDo(title: "공부하기", createDate: Date().addingTimeInterval(60000.0)),
-        ToDo(title: "운동하기", createDate: Date().addingTimeInterval(72000.0))
+        ToDo(title: "쇼핑하기", createDate: Date().addingTimeInterval(3200.0)),
+        ToDo(title: "청소하기", createDate: Date().addingTimeInterval(60000.0)),
+        ToDo(title: "빨래하기", createDate: Date().addingTimeInterval(72000.0))
     ]
 }
 
