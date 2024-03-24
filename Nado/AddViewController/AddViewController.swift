@@ -52,13 +52,6 @@ class AddViewController: UIViewController {
         }
     }
     
-    func setupKeyboardEvent() {
-        // 유저의 키보드의 높이에 따라 프레임 조절
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    
     // 입력 완료 버튼을 눌렀을 때
     @IBAction func doneButtonTapped(_ sender: Any) {
         // Title을 입력하지 않으면 Alert를 이용하여 경고창 표시
@@ -81,31 +74,6 @@ class AddViewController: UIViewController {
             delegate?.addTodoDidSave(todo: newItem)
         }
         dismiss(animated: true, completion: nil)
-    }
-    // 유저의 키보드가 나타날 때
-    @objc func keyboardWillShow(_ notification: Notification) {
-        DispatchQueue.main.async {
-            if let keyboardFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-                // 키보드가 나타날 때 뷰의 위치를 조절
-                let keyboardHeight = keyboardFrame.height
-                let newYPosition = self.view.frame.height - keyboardHeight - self.inView.frame.height
-                
-                UIView.animate(withDuration: 0.3) {
-                    self.inView.frame.origin.y = newYPosition
-                }
-            }
-        }
-    }
-    
-    @objc func keyboardWillHide(_ notification: Notification) {
-        if view.frame.origin.y != 0 {
-            view.frame.origin.y = 0
-        }
-    }
-    
-    // 터치 제스쳐를 통해 Modal을 닫음
-    @objc func handleTap(sender: UITapGestureRecognizer) {
-        self.dismiss(animated: true)
     }
     
     // 키보드 동작 감시 종료

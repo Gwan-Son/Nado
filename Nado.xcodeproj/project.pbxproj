@@ -24,6 +24,7 @@
 		9F90B3852BA8D39E000AB875 /* MainViewController+SwipeCellKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F90B3842BA8D39E000AB875 /* MainViewController+SwipeCellKit.swift */; };
 		9F90B3892BAD7393000AB875 /* ToDoListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F90B3882BAD7393000AB875 /* ToDoListStyle.swift */; };
 		9F90B38B2BAD8BB0000AB875 /* Date+ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F90B38A2BAD8BB0000AB875 /* Date+ToDo.swift */; };
+		9F90B38E2BAE117D000AB875 /* AddViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F90B38D2BAE117D000AB875 /* AddViewController+Actions.swift */; };
 		9F9B04142B989F7000D45782 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B04132B989F7000D45782 /* ToDo.swift */; };
 		9F9B04162B998D3300D45782 /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B04152B998D3300D45782 /* TodoCell.swift */; };
 		9FAA415B2B984598008DB48F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAA415A2B984598008DB48F /* MainViewController.swift */; };
@@ -82,6 +83,7 @@
 		9F90B3842BA8D39E000AB875 /* MainViewController+SwipeCellKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+SwipeCellKit.swift"; sourceTree = "<group>"; };
 		9F90B3882BAD7393000AB875 /* ToDoListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListStyle.swift; sourceTree = "<group>"; };
 		9F90B38A2BAD8BB0000AB875 /* Date+ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ToDo.swift"; sourceTree = "<group>"; };
+		9F90B38D2BAE117D000AB875 /* AddViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddViewController+Actions.swift"; sourceTree = "<group>"; };
 		9F9B04132B989F7000D45782 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		9F9B04152B998D3300D45782 /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
 		9FAA415A2B984598008DB48F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -140,16 +142,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		9F7E8C0F2BA21B3800CFF761 /* ViewContoller */ = {
+		9F7E8C0F2BA21B3800CFF761 /* MainViewContoller */ = {
 			isa = PBXGroup;
 			children = (
-				9FB7D1A12B98771A0057D231 /* AddViewController.swift */,
 				9FAA415A2B984598008DB48F /* MainViewController.swift */,
 				9F7E8C102BA21C4A00CFF761 /* MainViewController+Actions.swift */,
 				9F90B3822BA8D2AD000AB875 /* MainViewController+CollectionView.swift */,
 				9F90B3842BA8D39E000AB875 /* MainViewController+SwipeCellKit.swift */,
 			);
-			path = ViewContoller;
+			path = MainViewContoller;
 			sourceTree = "<group>";
 		};
 		9F8502D22B98406500C05453 = {
@@ -180,7 +181,8 @@
 			children = (
 				9F7E8C0E2BA21B3100CFF761 /* Models */,
 				9F90B3812BA8D23C000AB875 /* Cell */,
-				9F7E8C0F2BA21B3800CFF761 /* ViewContoller */,
+				9F7E8C0F2BA21B3800CFF761 /* MainViewContoller */,
+				9F90B38C2BAE112F000AB875 /* AddViewController */,
 				9F8502DE2B98406500C05453 /* AppDelegate.swift */,
 				9F8502E02B98406500C05453 /* SceneDelegate.swift */,
 				9F8502E42B98406500C05453 /* Main.storyboard */,
@@ -215,6 +217,15 @@
 				9F9B04152B998D3300D45782 /* TodoCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		9F90B38C2BAE112F000AB875 /* AddViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9FB7D1A12B98771A0057D231 /* AddViewController.swift */,
+				9F90B38D2BAE117D000AB875 /* AddViewController+Actions.swift */,
+			);
+			path = AddViewController;
 			sourceTree = "<group>";
 		};
 		9FB7D18C2B9867E30057D231 /* Fonts */ = {
@@ -516,6 +527,7 @@
 				9FB7D1A22B98771A0057D231 /* AddViewController.swift in Sources */,
 				9F9B04142B989F7000D45782 /* ToDo.swift in Sources */,
 				9F90B3802BA89D64000AB875 /* Shared.swift in Sources */,
+				9F90B38E2BAE117D000AB875 /* AddViewController+Actions.swift in Sources */,
 				9F8502E12B98406500C05453 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
